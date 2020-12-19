@@ -1,17 +1,36 @@
 <StackLayout class="login-buttons">
-    <FacebookLoginButton (login)="onLogin($event)"></FacebookLoginButton>
-    <Button text="Continue with Facebook (Custom)" (tap)="login()" automationText="facebookCustom"></Button>
-    <Button text="Get current access token" (tap)="getCurrentAccessToken()"></Button>
+	<FacebookLoginButton (login)="onLogin($event)"></FacebookLoginButton>
+	<Button
+		text="Continue with Facebook (Custom)"
+		(tap)="login()"
+		automationText="facebookCustom"
+	></Button>
+	<Button
+		text="Get current access token"
+		(tap)="getCurrentAccessToken()"
+	></Button>
 
-    <FacebookShareButton [content] = "linkContent"></FacebookShareButton>
-    <FacebookSendButton [content] = "genericContent"></FacebookSendButton>
-    <Button (tap) = "onShareDialog()" text = "Open Share dialog (link)"
-            *ngIf = "canShowLinksShareDialog"></Button>
-    <Button (tap) = "onShareDialogPhotos()" text = "Open Share dialog (photos)"
-            *ngIf = "canShowPhotosShareDialog"></Button>
-    <Button (tap) = "onSendDialog()" text = "Open Message Share dialog"
-            *ngIf = "canShowLinksMessageDialog"></Button>
-    <Button (tap) = "onSendGenericDialog()" text = "Share Message Generic Template"
-            *ngIf = "canShowGenericMessageDialog"></Button>
-    <Button (tap) = "logEvent()" text="Log event"></Button>
+	<FacebookShareButton [content]="linkContent"></FacebookShareButton>
+	<FacebookSendButton [content]="genericContent"></FacebookSendButton>
+	<Button
+		(tap)="onShareDialog()"
+		text="Open Share dialog (link)"
+		*ngIf="canShowLinksShareDialog"
+	></Button>
+	<Button
+		(tap)="onShareDialogPhotos()"
+		text="Open Share dialog (photos)"
+		*ngIf="canShowPhotosShareDialog"
+	></Button>
+	<Button
+		(tap)="onSendDialog()"
+		text="Open Message Share dialog"
+		*ngIf="canShowLinksMessageDialog"
+	></Button>
+	<Button
+		(tap)="onSendGenericDialog()"
+		text="Share Message Generic Template"
+		*ngIf="canShowGenericMessageDialog"
+	></Button>
+	<Button (tap)="logEvent()" text="Log event"></Button>
 </StackLayout>

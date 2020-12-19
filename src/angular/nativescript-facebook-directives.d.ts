@@ -1,4 +1,4 @@
 export declare class FacebookLoginButtonDirective {
-    constructor();
+	constructor();
 }
 export declare const DIRECTIVES: typeof FacebookLoginButtonDirective[];

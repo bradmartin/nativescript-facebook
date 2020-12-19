@@ -2,6 +2,7 @@
 *.map
 *.ts
 !*.d.ts
+typings/*
 /platforms/android/**/*
 !platforms/android/include.gradle
 !platforms/android/nativescript_facebook.aar

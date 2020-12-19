@@ -1,1 +1,1 @@
-export * from "./nativescript-facebook-module";
+export * from './nativescript-facebook-module';

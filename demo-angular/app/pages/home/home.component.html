@@ -1,17 +1,24 @@
 <StackLayout class="home">
-    <Image *ngIf="avatarUrl" src="{{ avatarUrl }}" class="avatar"></Image>
-    <StackLayout class="info">
-        <Label text="ID:" class="label"></Label>
-        <Label text="{{ userId }}"></Label>
-        <Label text="NAME:" class="label"></Label>
-        <Label text="{{ username }}"></Label>
-    </StackLayout>
-    <StackLayout class="buttons">
-        <FacebookLoginButton (logout)="onLogout($event)"></FacebookLoginButton>
-        <Button text="Log out (Custom)" (tap)="logout()" automationText="customLogOut"></Button>
-        <Button text="Get current access token" (tap)="getCurrentAccessToken()"></Button>
-    </StackLayout>
-    <StackLayout class="buttons">
-        <Button text="Log event" (tap)="logEvent()"></Button>
-    </StackLayout>
+	<Image *ngIf="avatarUrl" src="{{ avatarUrl }}" class="avatar"></Image>
+	<StackLayout class="info">
+		<Label text="ID:" class="label"></Label>
+		<Label text="{{ userId }}"></Label>
+		<Label text="NAME:" class="label"></Label>
+		<Label text="{{ username }}"></Label>
+	</StackLayout>
+	<StackLayout class="buttons">
+		<FacebookLoginButton (logout)="onLogout($event)"></FacebookLoginButton>
+		<Button
+			text="Log out (Custom)"
+			(tap)="logout()"
+			automationText="customLogOut"
+		></Button>
+		<Button
+			text="Get current access token"
+			(tap)="getCurrentAccessToken()"
+		></Button>
+	</StackLayout>
+	<StackLayout class="buttons">
+		<Button text="Log event" (tap)="logEvent()"></Button>
+	</StackLayout>
 </StackLayout>

@@ -1,4 +1,4 @@
 export declare class LoginResponse {
-    token: string;
-    constructor(token: string);
+	token: string;
+	constructor(token: string);
 }

@@ -1,18 +1,22 @@
-import { Directive } from "@angular/core"; // TODO: check require .Directive without hacks
+import { Directive } from '@angular/core'; // TODO: check require .Directive without hacks
 
 @Directive({
-    selector: "FacebookLoginButton"
+	selector: 'FacebookLoginButton'
 })
-export class FacebookLoginButtonDirective { }
+export class FacebookLoginButtonDirective {}
 
 @Directive({
-    selector: "FacebookShareButton"
+	selector: 'FacebookShareButton'
 })
-export class FacebookShareButtonDirective { }
+export class FacebookShareButtonDirective {}
 
 @Directive({
-    selector: "FacebookSendButton"
+	selector: 'FacebookSendButton'
 })
-export class FacebookSendButtonDirective { }
+export class FacebookSendButtonDirective {}
 
-export const DIRECTIVES = [FacebookLoginButtonDirective, FacebookShareButtonDirective, FacebookSendButtonDirective];
+export const DIRECTIVES = [
+	FacebookLoginButtonDirective,
+	FacebookShareButtonDirective,
+	FacebookSendButtonDirective
+];

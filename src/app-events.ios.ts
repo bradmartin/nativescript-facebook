@@ -1,23 +1,24 @@
-let application = require("tns-core-modules/application");
-let iosApplication;
-let appEventsLogger;
+import { Application } from '@nativescript/core';
+let iosApplication: UIApplication;
+
 export function initAnalytics() {
-    iosApplication = application.iosApplication;
-    FBSDKAppEvents.activateApp();
+	iosApplication = Application.ios.nativeApp;
+	FBSDKAppEvents.activateApp();
 }
 
 export function logEvent(name: string, parameters?: any) {
-    if (name === undefined) {
-        throw ("Argument 'name' is missing");
-    }
+	if (name === undefined) {
+		throw "Argument 'name' is missing";
+	}
 
-    if (parameters === undefined) {
-        FBSDKAppEvents.logEvent(name);
-    } else {
-        const parametersDictionary = new (NSDictionary as any)(
-            parameters.map(parameter => parameter.value),
-            parameters.map(parameter => parameter.key));
+	if (parameters === undefined) {
+		FBSDKAppEvents.logEvent(name);
+	} else {
+		const parametersDictionary = new (NSDictionary as any)(
+			parameters.map(parameter => parameter.value),
+			parameters.map(parameter => parameter.key)
+		);
 
-        FBSDKAppEvents.logEventParameters(name, parametersDictionary);
-    }
+		FBSDKAppEvents.logEventParameters(name, parametersDictionary);
+	}
 }

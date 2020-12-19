@@ -1,26 +1,30 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "lib": ["es6", "dom"],
-        "baseUrl": ".",
-        "removeComments": true,
-        "noLib": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "pretty": true,
-        "noEmitHelpers": true,
-        "skipLibCheck": true
-    },
-    "exclude": [
-        "node_modules",
-        "platforms",
-        "hooks"
-    ],
-    "compileOnSave": false,
-    "angularCompilerOptions": {
-        "strictMetadataEmit": true,
-        "skipTemplateCodegen": true,
-        "genDir": "."
-    }
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"removeComments": true,
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"lib": ["es6", "dom"],
+		"sourceMap": true,
+		"pretty": false,
+		"noEmitHelpers": true,
+		"skipLibCheck": true,
+		"plugins": [
+			{
+				"transform": "@nativescript/webpack/transformers/ns-transform-native-classes",
+				"type": "raw"
+			}
+		]
+	},
+	"exclude": ["node_modules", "platforms", "hooks"],
+	"compileOnSave": false,
+	"angularCompilerOptions": {
+		"strictMetadataEmit": true,
+		"skipTemplateCodegen": true,
+		"genDir": "."
+	}
 }

@@ -1,6 +1,5 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
-      xmlns:Facebook="nativescript-facebook"
-  loaded="pageLoaded" class="page">
+  xmlns:Facebook="nativescript-facebook" loaded="pageLoaded" class="page">
   <StackLayout class="home">
     <Image src="{{avatarUrl}}" class="avatar"/>
     <StackLayout class="info">

@@ -1,7 +1,7 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { LoginResponse } from "./login-response";
+import { EventData } from '@nativescript/core';
+import { LoginResponse } from './login-response';
 
 export interface LoginEventData extends EventData {
-  error: Error;
-  loginResponse: LoginResponse;
+	error: Error;
+	loginResponse: LoginResponse;
 }

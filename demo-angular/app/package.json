@@ -1,7 +1,0 @@
-{
-  "android": {
-    "v8Flags": "--expose_gc",
-    "requireModules": ["nativescript-facebook"]
-  },
-  "main": "main.js"
-}

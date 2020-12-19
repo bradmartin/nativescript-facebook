@@ -1,8 +1,7 @@
-import { Component, ChangeDetectorRef } from "@angular/core";
-import * as Facebook from "nativescript-facebook";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "ns-app",
-    templateUrl: "app.component.html",
+	selector: 'ns-app',
+	templateUrl: 'app.component.html'
 })
 export class AppComponent {}
